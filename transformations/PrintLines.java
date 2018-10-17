@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 
 public class PrintLines {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -19,13 +20,14 @@ public class PrintLines {
         processFile(filename);
 
     }
+    
     public static void processFile(String filename) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(filename));  
-            String line = null; 
+            StringBuffer line = null; 
             while ((line = br.readLine()) != null)  
             {  
-                System.out.println(line);
+                processLine(line);
             } 
         }
         catch(FileNotFoundException f) {
@@ -36,6 +38,9 @@ public class PrintLines {
             System.out.println("Caught an IOException");
             return;
         }
-        
+    }
+
+    public static void processLine(String line) {
+        System.out.println((new StringBuffer(line).reverse()));
     }
 }
