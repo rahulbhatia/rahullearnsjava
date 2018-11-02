@@ -5,3 +5,4 @@ When learning a new language (even one as familiar as Java) it helps to focus on
 ## Projects
   - Hello World - Standard Hello World project in Java
   - transformations - String & file manipulation
+  - tcp-server - Client and server tcp examples taken from the web
